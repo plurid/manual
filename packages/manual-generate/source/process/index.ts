@@ -4,6 +4,10 @@ import {
     CommanderStatic,
 } from 'commander';
 
+import {
+    ManualGenerate,
+} from '../data/interfaces';
+
 
 
 const processArguments = async (
@@ -17,8 +21,13 @@ const processArguments = async (
 
     if (file) {
         const filepath = path.join(process.cwd(), file);
-        const data = require(filepath);
-        console.log(data);
+
+        try {
+            const data: ManualGenerate = require(filepath);
+            console.log(data);
+        } catch (error) {
+            console.log(`\n\tSomething Went Wrong\n\n\tCheck the generation file:\n\t${filepath}\n`);
+        }
     }
 }
 
