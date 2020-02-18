@@ -38,7 +38,7 @@ export default {
     // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
     external: [],
     watch: {
-        include: 'src/**',
+        include: 'source/**',
     },
     plugins: [
         // Allow json resolution
