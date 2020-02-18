@@ -1,0 +1,110 @@
+{
+    "name": "@plurid/manual-react",
+    "version": "0.1.0",
+    "description": "React implementation of Plurid Manual to document software packages in a 3D structure.",
+    "keywords": [
+        "plurid",
+        "manual",
+        "3D",
+        "html",
+        "react"
+    ],
+    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/plurid/manual"
+    },
+    "bugs": {
+        "email": "feedback@plurid.com",
+        "url": "https://github.com/plurid/manual/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "homepage": "https://github.com/plurid/manual/tree/master/packages/manual-react",
+    "files": [
+        "distribution/"
+    ],
+    "main": "distribution/index.js",
+    "module": "distribution/index.es.js",
+    "types": "distribution/index.d.ts",
+    "engines": {
+        "node": ">=8",
+        "npm": ">=6"
+    },
+    "scripts": {
+        "clean": "rm -rf ./distribution",
+        "spec": "jest",
+        "lint": "eslint ./source --ext .ts,.tsx",
+        "minify.cjs": "minify ./distribution/index.js --out-file ./distribution/index.min.js",
+        "minify": "yarn minify.cjs",
+        "start": "yarn clean && rollup -c -w --environment MODE_ENV:local",
+        "build.development": "yarn clean && rollup -c --environment MODE_ENV:local",
+        "build.production": "yarn clean && rollup -c --environment MODE_ENV:production",
+        "build": "yarn clean && yarn lint && yarn spec && yarn build.production && yarn minify",
+        "prepublishOnly": "yarn build"
+    },
+    "peerDependencies": {
+        "@plurid/plurid-functions": ">=0.1",
+        "@plurid/plurid-icons-react": ">=0.1",
+        "@plurid/plurid-themes": ">=0.1",
+        "@plurid/plurid-ui-react": ">=0.1",
+        "react": ">=16",
+        "react-dom": ">=16",
+        "react-redux": ">=7",
+        "redux": ">=4",
+        "redux-thunk": ">=2",
+        "styled-components": ">=4"
+    },
+    "dependencies": {
+        "hammerjs": "^2.0.8",
+        "redux-devtools-extension": "^2.13.8"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.4",
+        "@plurid/plurid-functions": "^0.1.7",
+        "@plurid/plurid-icons-react": "^0.1.17",
+        "@plurid/plurid-themes": "^0.1.26",
+        "@plurid/plurid-ui-react": "^0.1.79",
+        "@rollup/plugin-commonjs": "^11.0.2",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@rollup/plugin-replace": "^2.3.1",
+        "@rollup/plugin-url": "^4.0.2",
+        "@types/enzyme": "^3.10.5",
+        "@types/enzyme-adapter-react-16": "^1.0.6",
+        "@types/hammerjs": "^2.0.36",
+        "@types/jest": "^25.1.2",
+        "@types/react": "^16.9.20",
+        "@types/react-dom": "^16.9.5",
+        "@types/react-redux": "^7.1.7",
+        "@types/styled-components": "^4.4.3",
+        "@typescript-eslint/eslint-plugin": "^2.20.0",
+        "@typescript-eslint/parser": "^2.20.0",
+        "babel-minify": "^0.5.1",
+        "babel-plugin-styled-components": "^1.10.7",
+        "babel-runtime": "^6.26.0",
+        "cross-env": "^7.0.0",
+        "dotenv-cli": "^3.1.0",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2",
+        "eslint": "^6.8.0",
+        "jest": "^25.1.0",
+        "jest-config": "^25.1.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-redux": "^7.2.0",
+        "react-test-renderer": "^16.12.0",
+        "redux": "^4.0.5",
+        "redux-thunk": "^2.3.0",
+        "rollup": "^1.31.1",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-peer-deps-external": "^2.2.2",
+        "rollup-plugin-postcss": "^2.0.6",
+        "rollup-plugin-typescript2": "^0.26.0",
+        "styled-components": "^5.0.1",
+        "ts-jest": "^25.2.0",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.7.5"
+    }
+}
