@@ -1,11 +1,12 @@
 import React from 'react';
+
 import { AnyAction } from 'redux';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import {
-    PluridApp as PluridAppProperties,
-} from '@plurid/plurid-data';
+    ManualProperties,
+} from '@plurid/manual-data';
 
 import View from '../../View';
 
@@ -15,7 +16,7 @@ import StateContext from '../../../modules/services/state/context';
 
 
 interface SubAppRootOwnProperties {
-    appProperties: PluridAppProperties;
+    appProperties: ManualProperties;
 }
 
 interface SubAppRootStateProperties {
@@ -28,11 +29,16 @@ type SubAppRootProperties = SubAppRootOwnProperties
     & SubAppRootStateProperties
     & SubAppRootDispatchProperties;
 
-const SubAppRoot: React.FC<SubAppRootProperties> = (properties) => {
+const SubAppRoot: React.FC<SubAppRootProperties> = (
+    properties,
+) => {
+    /** properties */
     const {
         appProperties,
     } = properties;
 
+
+    /** render */
     return (
         <View
             appProperties={appProperties}
