@@ -2,13 +2,8 @@ import program, {
     CommanderStatic,
 } from 'commander';
 
+import processArguments from './process';
 
-
-const processArgs = (
-    program: CommanderStatic,
-) => {
-    console.log(program);
-}
 
 
 const main = async (
@@ -20,7 +15,7 @@ const main = async (
     if (process.argv.length > 2) {
         program
             .action(() => {
-                processArgs(program);
+                processArguments(program);
             });
     }
 
