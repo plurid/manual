@@ -5,6 +5,11 @@ import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import {
+    PluridSubApp,
+    PluridPage,
+} from '@plurid/plurid-react';
+
+import {
     Theme,
 } from '@plurid/plurid-themes';
 
@@ -44,10 +49,28 @@ const Space: React.FC<SpaceProperties> = (
     // } = properties;
 
 
+    const pages: PluridPage[] = [
+        {
+            path: '/',
+            component: {
+                element: () => <></>,
+                properties: {},
+            },
+        },
+    ];
+
+    const view = [
+        '/',
+    ];
+
+
     /** render */
     return (
         <StyledSpace>
-            Space
+            <PluridSubApp
+                pages={pages}
+                view={view}
+            />
         </StyledSpace>
     );
 }
