@@ -368,6 +368,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@plurid/manual-data@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@plurid/manual-data/-/manual-data-0.1.0.tgz#9d8905f85ee668a8b55e33998a9050e1d643ad36"
+  integrity sha512-rCNHJ+ESP+A9Qu2/Xv0nPWsTD/GT9am/tzljMuGwih7iTUHm/IcoXF4mqjgLibSYcKZBRJbVCqis6Z/U4ntqfA==
+
 "@plurid/plurid-functions@^0.1.7":
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@plurid/plurid-functions/-/plurid-functions-0.1.7.tgz#3d0b1c0014d74b05c5ef726949fdd93069b00c64"
