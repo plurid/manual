@@ -5,9 +5,6 @@ import React, {
 
 import ManualApp from '@plurid/manual-react';
 
-// import Page1 from './containers/Page1';
-// import Page2 from './containers/Page2';
-
 
 
 const App = () => {
