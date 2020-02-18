@@ -1,6 +1,7 @@
 import React, {
     Component,
 } from 'react';
+
 import {
     Provider as ReduxProvider,
 } from 'react-redux';
@@ -9,8 +10,8 @@ import {
 } from 'redux';
 
 import {
-    PluridApp as PluridAppProperties,
-} from '@plurid/plurid-data';
+    ManualProperties,
+} from '@plurid/manual-data';
 
 import SubAppRoot from './SubAppRoot';
 
@@ -19,10 +20,10 @@ import StateContext from '../../modules/services/state/context';
 
 
 
-class PluridSubApp extends Component<PluridAppProperties, {}> {
+class PluridSubApp extends Component<ManualProperties, {}> {
     private store: any;
 
-    constructor(props: PluridAppProperties) {
+    constructor(props: ManualProperties) {
         super(props);
         this.store = createStore(reducer);
     }
