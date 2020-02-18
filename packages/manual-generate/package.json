@@ -24,9 +24,9 @@
     "engines": {
         "node": ">=6.0.0"
     },
-    "main": "dist/manual-generate.umd.js",
-    "module": "dist/manual-generate.es5.js",
-    "typings": "dist/types/index.d.ts",
+    "main": "distribution/manual-generate.umd.js",
+    "module": "distribution/manual-generate.es5.js",
+    "typings": "distribution/types/index.d.ts",
     "bin": {
         "plurimanual": "bin/manual-generate"
     },
@@ -38,10 +38,10 @@
     "scripts": {
         "tsc": "tsc",
         "lint": "eslint ./source --ext .ts,.tsx",
-        "prebuild": "rimraf dist",
-        "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src && yarn build.removeSpecs",
+        "prebuild": "rimraf distribution",
+        "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out documentation --target es6 --theme minimal --mode file src && yarn build.removeSpecs",
         "build.dev": "tsc --module commonjs && rollup -c rollup.config.ts && yarn build.removeSpecs",
-        "build.removeSpecs": "rm -rf `find ./dist/ -type d -name __specs__`",
+        "build.removeSpecs": "rm -rf `find ./distribution/ -type d -name __specs__`",
         "start": "rollup -c rollup.config.ts -w",
         "spec": "jest --coverage",
         "spec:watch": "jest --coverage --watch",
