@@ -1,0 +1,85 @@
+{
+    "name": "@plurid/manual-generate",
+    "version": "0.1.0",
+    "description": "Generate plurid' manual data from software packages",
+    "keywords": [
+        "plurid",
+        "manual",
+        "generate"
+    ],
+    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/plurid/manual"
+    },
+    "bugs": {
+        "email": "feedback@plurid.com",
+        "url": "https://github.com/plurid/manual/issues"
+    },
+    "homepage": "https://github.com/plurid/manual/blob/master/packages/manual-generate/README.md",
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=6.0.0"
+    },
+    "main": "dist/manual-generate.umd.js",
+    "module": "dist/manual-generate.es5.js",
+    "typings": "dist/types/index.d.ts",
+    "bin": {
+        "plurimanual": "bin/manual-generate"
+    },
+    "files": [
+        "distribution",
+        "binary"
+    ],
+    "preferGlobal": true,
+    "scripts": {
+        "tsc": "tsc",
+        "lint": "eslint ./source --ext .ts,.tsx",
+        "prebuild": "rimraf dist",
+        "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src && yarn build.removeSpecs",
+        "build.dev": "tsc --module commonjs && rollup -c rollup.config.ts && yarn build.removeSpecs",
+        "build.removeSpecs": "rm -rf `find ./dist/ -type d -name __specs__`",
+        "start": "rollup -c rollup.config.ts -w",
+        "spec": "jest --coverage",
+        "spec:watch": "jest --coverage --watch",
+        "spec:prod": "npm run lint && npm run spec -- --no-cache",
+        "report-coverage": "cat ./coverage/lcov.info | coveralls",
+        "prepublishOnly": "yarn build"
+    },
+    "dependencies": {
+        "commander": "^4.1.1",
+        "inquirer": "^7.0.4"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^11.0.2",
+        "@rollup/plugin-json": "^4.0.2",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "@types/inquirer": "^6.5.0",
+        "@types/jest": "^25.1.2",
+        "@types/node": "^13.7.1",
+        "@typescript-eslint/eslint-plugin": "^2.20.0",
+        "@typescript-eslint/parser": "^2.20.0",
+        "colors": "^1.4.0",
+        "coveralls": "^3.0.9",
+        "cross-env": "^7.0.0",
+        "eslint": "^6.8.0",
+        "jest": "^25.1.0",
+        "jest-config": "^25.1.0",
+        "lodash.camelcase": "^4.3.0",
+        "prompt": "^1.0.0",
+        "replace-in-file": "^5.0.2",
+        "rimraf": "^3.0.2",
+        "rollup": "^1.31.1",
+        "rollup-plugin-peer-deps-external": "^2.2.2",
+        "rollup-plugin-sourcemaps": "^0.5.0",
+        "rollup-plugin-typescript2": "^0.26.0",
+        "shelljs": "^0.8.3",
+        "ts-jest": "^25.2.0",
+        "ts-node": "^8.6.2",
+        "typedoc": "^0.16.10",
+        "typescript": "^3.7.5"
+    }
+}
