@@ -1,56 +1,23 @@
 import {
     /** interfaces */
-    PluridPage,
-    PluridDocument,
-    PluridConfiguration,
-    PluridView,
-    RecursivePartial,
+    ManualAppProperties,
+} from '@plurid/manual-data';
 
-    /** enumerations */
-    LAYOUT_TYPES as SPACE_LAYOUT,
-    SIZES,
-    TRANSFORM_MODES,
-    TRANSFORM_TOUCHES,
-} from '@plurid/plurid-data';
+import ManualApp from './App';
 
-import PluridPubSub, {
-    TOPICS,
-} from '@plurid/plurid-pubsub';
+import ManualSubApp from './App/SubApp';
 
-import PluridApp from './App';
-
-import PluridSubApp from './App/SubApp';
-
-import PluridLink from './modules/components/PluridLink';
-
-import PluridVirtualList from './modules/components/PluridVirtual/List';
 
 
 export {
     /** Interfaces */
-    PluridPage,
-    PluridDocument,
-    PluridConfiguration,
-    PluridView,
-    RecursivePartial,
-
-    /** Enumerations */
-    SPACE_LAYOUT,
-    SIZES,
-    TRANSFORM_MODES,
-    TRANSFORM_TOUCHES,
-
-    /** PubSub */
-    PluridPubSub,
-    TOPICS,
+    ManualAppProperties,
 
     /** SubApp */
-    PluridSubApp,
+    ManualSubApp,
 
     /** Components */
-    PluridLink,
-    PluridVirtualList,
 };
 
 
-export default PluridApp;
+export default ManualApp;
