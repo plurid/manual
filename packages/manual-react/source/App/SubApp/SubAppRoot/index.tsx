@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import {
-    ManualProperties,
+    ManualAppProperties,
 } from '@plurid/manual-data';
 
 import View from '../../View';
@@ -16,7 +16,7 @@ import StateContext from '../../../modules/services/state/context';
 
 
 interface SubAppRootOwnProperties {
-    appProperties: ManualProperties;
+    appProperties: ManualAppProperties;
 }
 
 interface SubAppRootStateProperties {

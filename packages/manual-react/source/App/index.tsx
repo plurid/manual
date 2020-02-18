@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-    ManualProperties,
+    ManualAppProperties,
 } from '@plurid/manual-data';
 
 import Root from './Root';
@@ -13,7 +13,7 @@ import store from '../modules/services/state/store';
 const initialState = {};
 const initializedStore = store(initialState);
 
-const PluridApp: React.FC<ManualProperties> = (
+const PluridApp: React.FC<ManualAppProperties> = (
     properties,
 ) => {
     return (

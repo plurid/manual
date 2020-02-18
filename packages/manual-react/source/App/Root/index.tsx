@@ -4,7 +4,7 @@ import { Store, AnyAction } from 'redux';
 import { Provider as ReduxProvider } from 'react-redux';
 
 import {
-    ManualProperties,
+    ManualAppProperties,
 } from '@plurid/manual-data';
 
 import View from '../View';
@@ -18,7 +18,7 @@ import StateContext from '../../modules/services/state/context';
 
 interface RootProperties {
     store: Store<AppState, AnyAction>;
-    appProperties: ManualProperties;
+    appProperties: ManualAppProperties;
 }
 
 const Root: React.FC<RootProperties> = (

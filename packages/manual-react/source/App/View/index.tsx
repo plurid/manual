@@ -12,7 +12,7 @@ import { ThunkDispatch } from 'redux-thunk';
 // import Hammer from 'hammerjs';
 
 import {
-    ManualProperties,
+    ManualAppProperties,
 } from '@plurid/manual-data';
 
 // import {
@@ -42,7 +42,7 @@ import StateContext from '../../modules/services/state/context';
 
 
 export interface ViewOwnProperties {
-    appProperties: ManualProperties;
+    appProperties: ManualAppProperties;
 }
 
 interface ViewStateProperties {
