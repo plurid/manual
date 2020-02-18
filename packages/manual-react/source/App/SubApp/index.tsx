@@ -10,7 +10,7 @@ import {
 } from 'redux';
 
 import {
-    ManualProperties,
+    ManualAppProperties,
 } from '@plurid/manual-data';
 
 import SubAppRoot from './SubAppRoot';
@@ -20,11 +20,13 @@ import StateContext from '../../modules/services/state/context';
 
 
 
-class PluridSubApp extends Component<ManualProperties, {}> {
+class PluridSubApp extends Component<ManualAppProperties, {}> {
     private store: any;
 
-    constructor(props: ManualProperties) {
-        super(props);
+    constructor(
+        properties: ManualAppProperties,
+    ) {
+        super(properties);
         this.store = createStore(reducer);
     }
 
