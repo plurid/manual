@@ -1,4 +1,4 @@
-export interface ManualProperties {
+export interface ManualAppProperties {
     modules: ManualModule[];
     metadata: ManualMetadata;
 }
