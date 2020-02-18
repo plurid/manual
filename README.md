@@ -17,6 +17,15 @@ Documentation for software packages
 
 ## Packages
 
+<a target="_blank" href="https://www.npmjs.com/package/@plurid/manual-data">
+    <img src="https://img.shields.io/npm/v/@plurid/manual-data.svg?logo=npm&colorB=1380C3&style=for-the-badge" alt="Version">
+</a>
+
+[@plurid/manual-data][manual-data] • shared data - constants, enumerations, interfaces
+
+[manual-data]: https://github.com/plurid/manual/tree/master/packages/manual-data
+
+
 <a target="_blank" href="https://www.npmjs.com/package/@plurid/manual-react">
     <img src="https://img.shields.io/npm/v/@plurid/manual-react.svg?logo=npm&colorB=1380C3&style=for-the-badge" alt="Version">
 </a>
