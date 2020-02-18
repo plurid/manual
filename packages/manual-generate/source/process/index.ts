@@ -10,6 +10,13 @@ import {
 
 
 
+const handlePackages = (
+    data: ManualGenerate,
+) => {
+
+}
+
+
 const processArguments = async (
     program: CommanderStatic,
 ) => {
@@ -24,7 +31,7 @@ const processArguments = async (
 
         try {
             const data: ManualGenerate = require(filepath);
-            console.log(data);
+            handlePackages(data);
         } catch (error) {
             console.log(`\n\tSomething Went Wrong\n\n\tCheck the generation file:\n\t${filepath}\n`);
         }
