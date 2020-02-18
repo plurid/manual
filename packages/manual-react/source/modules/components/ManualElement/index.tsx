@@ -5,16 +5,11 @@ import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import {
-    PluridSubApp,
-    PluridPage,
-} from '@plurid/plurid-react';
-
-import {
     Theme,
 } from '@plurid/plurid-themes';
 
 import {
-    StyledSpace,
+    StyledManualElement,
 } from './styled';
 
 import { AppState } from '../../services/state/store';
@@ -24,62 +19,47 @@ import selectors from '../../services/state/selectors';
 
 
 
-interface SpaceOwnProperties {
+interface ManualElementOwnProperties {
 }
 
-interface SpaceStateProperties {
+interface ManualElementStateProperties {
     stateGeneralTheme: Theme;
     stateInteractionTheme: Theme;
 }
 
-interface SpaceDispatchProperties {
+interface ManualElementDispatchProperties {
 }
 
-type SpaceProperties = SpaceOwnProperties
-    & SpaceStateProperties
-    & SpaceDispatchProperties;
+type ManualElementProperties = ManualElementOwnProperties
+    & ManualElementStateProperties
+    & ManualElementDispatchProperties;
 
-const Space: React.FC<SpaceProperties> = (
+const ManualElement: React.FC<ManualElementProperties> = (
     properties,
 ) => {
     /** properties */
-    // const {
-        // /** state */
+    const {
+        /** own */
+        children,
+
+        /** state */
         // stateGeneralTheme,
         // stateInteractionTheme,
-    // } = properties;
-
-
-    const pages: PluridPage[] = [
-        {
-            path: '/',
-            component: {
-                element: () => <></>,
-                properties: {},
-            },
-        },
-    ];
-
-    const view = [
-        '/',
-    ];
+    } = properties;
 
 
     /** render */
     return (
-        <StyledSpace>
-            <PluridSubApp
-                pages={pages}
-                view={view}
-            />
-        </StyledSpace>
+        <StyledManualElement>
+            {children}
+        </StyledManualElement>
     );
 }
 
 
 const mapStateToProperties = (
     state: AppState,
-): SpaceStateProperties => ({
+): ManualElementStateProperties => ({
     stateGeneralTheme: selectors.themes.getGeneralTheme(state),
     stateInteractionTheme: selectors.themes.getInteractionTheme(state),
 });
@@ -87,7 +67,7 @@ const mapStateToProperties = (
 
 const mapDispatchToProperties = (
     dispatch: ThunkDispatch<{}, {}, AnyAction>,
-): SpaceDispatchProperties => ({
+): ManualElementDispatchProperties => ({
 });
 
 
@@ -98,4 +78,4 @@ export default connect(
     {
         context: StateContext,
     },
-)(Space);
+)(ManualElement);
