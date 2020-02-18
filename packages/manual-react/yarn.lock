@@ -373,6 +373,16 @@
   resolved "https://registry.yarnpkg.com/@plurid/manual-data/-/manual-data-0.1.1.tgz#2402ed94bcd02a5d7a103c4a774bff85b5326533"
   integrity sha512-j5LBwkGokpxOzYtHNRaXjkQF+gHV86kMuXfDpbcoy9H4deui3J/yLkYw1fvIUV/ancuYNaFd0GLHibyRzFzKXA==
 
+"@plurid/plurid-data@^0.1.91":
+  version "0.1.91"
+  resolved "https://registry.yarnpkg.com/@plurid/plurid-data/-/plurid-data-0.1.91.tgz#ed674a00684f03b927af52c658c554afcf06c660"
+  integrity sha512-odxP5sjwTvetEPosi+Tu3WwEki9rn7/bXbJdxaY1SWPbovh7pHhL6GTbKdGeoxBYrYgWVmSXZHkFLI+Q3IUKNQ==
+
+"@plurid/plurid-engine@^0.1.39":
+  version "0.1.39"
+  resolved "https://registry.yarnpkg.com/@plurid/plurid-engine/-/plurid-engine-0.1.39.tgz#fd900de0547e21dc5749a1d04ed341ed1370003e"
+  integrity sha512-WrTkMshLsVgaWumlDMYYLWr3s0b1MY6g3hOznH+fZk6dKDssqs9mjH84pwEnANi9zefC4FaOVwOX9b0v2UVxMA==
+
 "@plurid/plurid-functions@^0.1.7":
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/@plurid/plurid-functions/-/plurid-functions-0.1.7.tgz#3d0b1c0014d74b05c5ef726949fdd93069b00c64"
@@ -382,6 +392,22 @@
   version "0.1.17"
   resolved "https://registry.yarnpkg.com/@plurid/plurid-icons-react/-/plurid-icons-react-0.1.17.tgz#2411f546657602531f88312e64878f231c0c0c9a"
   integrity sha512-ZDXlIHeEUbysw9C34cIcHpZjouNq9Qtc6DKg1gMxnwBx7GSMf5VI0cIVa2f0oKFaTn4EL44JqbHJnkqq0IBAKw==
+
+"@plurid/plurid-pubsub@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@plurid/plurid-pubsub/-/plurid-pubsub-0.1.3.tgz#f5014195a065f13c47f2895e4942ba1f3ec045a3"
+  integrity sha512-mviWTVQhkIifQApuLa60jSVA+azeeKXYvNTFejzJJtEFG0s1h2a1BqtaH/Fj4wCzymivJsD47JqbaLfg7Xw4zA==
+
+"@plurid/plurid-react@^0.1.96":
+  version "0.1.96"
+  resolved "https://registry.yarnpkg.com/@plurid/plurid-react/-/plurid-react-0.1.96.tgz#6fd6fd92bf953ca9f02dfc1a5a301a64d5ea8d93"
+  integrity sha512-NcJqTGlg/u5unsmB99b6ViTgkXAsB3ZUR8gRxK3JGim7SJWc7CqcwparKwmwspOrPIYcV+WdPt1ICeItQEuBzg==
+  dependencies:
+    "@plurid/plurid-data" "^0.1.91"
+    "@plurid/plurid-engine" "^0.1.39"
+    "@plurid/plurid-pubsub" "^0.1.3"
+    hammerjs "^2.0.8"
+    redux-devtools-extension "^2.13.8"
 
 "@plurid/plurid-themes@^0.1.26":
   version "0.1.26"
