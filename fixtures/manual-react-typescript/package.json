@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@plurid/manual-react": "^0.1.0",
     "@plurid/plurid-functions": "^0.1.7",
     "@plurid/plurid-icons-react": "^0.1.17",
     "@plurid/plurid-themes": "^0.1.26",
