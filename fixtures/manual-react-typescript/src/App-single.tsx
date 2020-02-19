@@ -15,7 +15,7 @@ const App = () => {
     ];
 
     const metadata = {
-        name: 'one',
+        name: '@plurid/plurid-react',
     };
 
     return (
