@@ -83,6 +83,9 @@ const Space: React.FC<SpaceProperties> = (
         elements: {
             plane: {
                 width: 0.5,
+                controls: {
+                    show: false,
+                },
             },
         },
         space: {
