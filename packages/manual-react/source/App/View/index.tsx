@@ -33,6 +33,8 @@ import {
 
 // import handleView from './logic';
 
+import Space from '../../modules/containers/Space';
+
 import { AppState } from '../../modules/services/state/store';
 // import selectors from '../../modules/services/state/selectors';
 // import actions from '../../modules/services/state/actions';
@@ -94,6 +96,8 @@ const View: React.FC<ViewProperties> = (
             ref={viewElement}
             tabIndex={0}
         >
+            <Space />
+
             {/* {!spaceLoading && (
                 <>
                     <GlobalStyle />
