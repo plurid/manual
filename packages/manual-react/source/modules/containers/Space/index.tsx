@@ -17,6 +17,8 @@ import {
     StyledSpace,
 } from './styled';
 
+import ManualElement from '../../components/ManualElement';
+
 import { AppState } from '../../services/state/store';
 import StateContext from '../../services/state/context';
 import selectors from '../../services/state/selectors';
@@ -55,7 +57,13 @@ const Space: React.FC<SpaceProperties> = (
         {
             path: '/',
             component: {
-                element: () => <>manual</>,
+                element: () => (
+                    <ManualElement>
+                        <div>
+                            element
+                        </div>
+                    </ManualElement>
+                ),
                 properties: {},
             },
         },
