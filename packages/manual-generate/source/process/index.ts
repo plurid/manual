@@ -21,7 +21,7 @@ const createGitIgnore = async (
     const gitIgnorePath = path.join(directoryPath, '/.gitignore');
 
     if (!fs.existsSync(gitIgnorePath)){
-        await asyncfs.writeFile(gitIgnorePath, './packages');
+        await asyncfs.writeFile(gitIgnorePath, 'packages');
     }
 }
 
