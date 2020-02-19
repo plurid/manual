@@ -9,6 +9,8 @@ import {
 
 import pacote from 'pacote';
 
+import typedoc from 'typedoc';
+
 import {
     ManualGenerate,
 } from '../data/interfaces';
@@ -53,7 +55,13 @@ const handlePackages = async (
     console.log(`\n`);
 
     // parse downloaded packages
+    // const typedocApp = new typedoc.Application();
 
+    for (const packagePath of packagePaths) {
+        const packageDocs = path.join(directoryPath, `/docs/${packagePath}`);
+        const packageFiles = await asyncfs.readdir(packageDocs);
+        console.log(packageFiles);
+    }
 }
 
 
