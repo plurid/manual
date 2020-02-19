@@ -68,6 +68,10 @@ const handlePackages = async (
         await createGitIgnore(directoryPath);
     }
 
+
+    /**
+     * Download packages
+     */
     const packagePaths = [];
 
     for (const dataPackage of data.packages) {
@@ -81,9 +85,10 @@ const handlePackages = async (
 
     console.log(`\n`);
 
-    // parse downloaded packages
-    const typedocApp = new typedoc.Application();
 
+    /**
+     * Parse downloaded packages.
+     */
     for (const packagePath of packagePaths) {
         const packageDocs = path.join(directoryPath, `/docs/${packagePath}`);
         const packageFiles = walkSync(packagePath, []);
@@ -97,6 +102,10 @@ const handlePackages = async (
             return false;
         });
 
+        const typedocApp = new typedoc.Application();
+        typedocApp.bootstrap({
+            ignoreCompilerErrors: true,
+        });
         typedocApp.generateJson(filteredPackageFiles, packageDocs);
     }
 }
