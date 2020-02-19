@@ -5,6 +5,269 @@
 	"flags": {},
 	"originalName": "",
 	"children": [
+        {
+			"id": 210,
+			"name": "\"interfaces/external/app.d\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/Cavel/Caveljan/i/theings/sauft/plurid/technologies/manual/packages/manual-generate/plurid/packages/@plurid/plurid-data/distribution/interfaces/external/app.d.ts",
+			"children": [
+				{
+					"id": 211,
+					"name": "PluridApp",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 217,
+							"name": "configuration",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "interfaces/external/app.d.ts",
+									"line": 29,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 207,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 132,
+										"name": "PluridConfiguration"
+									}
+								],
+								"name": "RecursivePartial"
+							}
+						},
+						{
+							"id": 216,
+							"name": "documents",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "A `PluridApp` must be either pages or documents based.",
+								"text": "A `PluridDocument` is a collection of PluridPages (`PluridPage[]`).\n"
+							},
+							"sources": [
+								{
+									"fileName": "interfaces/external/app.d.ts",
+									"line": 28,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 31,
+									"name": "PluridDocument"
+								}
+							}
+						},
+						{
+							"id": 213,
+							"name": "pageContext",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Optional context for the page to have access to."
+							},
+							"sources": [
+								{
+									"fileName": "interfaces/external/app.d.ts",
+									"line": 14,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 28,
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "PluridPageContext"
+							}
+						},
+						{
+							"id": 214,
+							"name": "pageContextValue",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Optional context initial value."
+							},
+							"sources": [
+								{
+									"fileName": "interfaces/external/app.d.ts",
+									"line": 18,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 212,
+							"name": "pages",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "A `PluridApp` must be either pages or documents based."
+							},
+							"sources": [
+								{
+									"fileName": "interfaces/external/app.d.ts",
+									"line": 10,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 2,
+									"name": "PluridPage"
+								}
+							}
+						},
+						{
+							"id": 218,
+							"name": "pubsub",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "interfaces/external/app.d.ts",
+									"line": 30,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "PluridPubSub"
+							}
+						},
+						{
+							"id": 215,
+							"name": "view",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Paths to the pages in view on the initial rendering."
+							},
+							"sources": [
+								{
+									"fileName": "interfaces/external/app.d.ts",
+									"line": 22,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 25,
+											"name": "PluridView"
+										}
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								217,
+								216,
+								213,
+								214,
+								212,
+								218,
+								215
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "interfaces/external/app.d.ts",
+							"line": 6,
+							"character": 26
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						211
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "interfaces/external/app.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
 		{
 			"id": 973,
 			"name": "\"App/Root/index.d\"",
@@ -1506,7 +1769,7 @@
 					"character": 0
 				}
 			]
-		}
+        }
 	],
 	"groups": [
 		{
