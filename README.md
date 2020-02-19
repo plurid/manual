@@ -15,6 +15,11 @@
 Documentation for software packages
 
 
+| Supported Languages |
+| ------------------- |
+| TypeScript          |
+
+
 ## Packages
 
 <a target="_blank" href="https://www.npmjs.com/package/@plurid/manual-data">
