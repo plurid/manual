@@ -35,7 +35,8 @@ const handlePackages = async (
         console.log(`\n\tCreated directory: ${directoryPath}`);
 
         fs.mkdirSync(directoryPath);
-        createGitIgnore(directoryPath);
+
+        await createGitIgnore(directoryPath);
     }
 
     const packagePaths = [];
