@@ -1,0 +1,1649 @@
+{
+	"id": 0,
+	"name": "@plurid/plurid-react",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 973,
+			"name": "\"App/Root/index.d\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/Cavel/Caveljan/i/theings/sauft/plurid/technologies/manual/packages/manual-generate/plurid/packages/@plurid/plurid-react/distribution/App/Root/index.d.ts",
+			"children": [
+				{
+					"id": 974,
+					"name": "RootProperties",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 976,
+							"name": "appProperties",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/Root/index.d.ts",
+									"line": 7,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "PluridAppProperties"
+							}
+						},
+						{
+							"id": 975,
+							"name": "store",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/Root/index.d.ts",
+									"line": 6,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 947,
+										"name": "AppState"
+									},
+									{
+										"type": "reference",
+										"name": "AnyAction"
+									}
+								],
+								"name": "Store"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								976,
+								975
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "App/Root/index.d.ts",
+							"line": 5,
+							"character": 24
+						}
+					]
+				},
+				{
+					"id": 977,
+					"name": "Root",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "App/Root/index.d.ts",
+							"line": 9,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"id": 974,
+								"name": "RootProperties"
+							}
+						],
+						"name": "React.FC"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						974
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						977
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "App/Root/index.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 978,
+			"name": "\"App/SubApp/SubAppRoot/index.d\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/Cavel/Caveljan/i/theings/sauft/plurid/technologies/manual/packages/manual-generate/plurid/packages/@plurid/plurid-react/distribution/App/SubApp/SubAppRoot/index.d.ts",
+			"children": [
+				{
+					"id": 982,
+					"name": "SubAppRootDispatchProperties",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "App/SubApp/SubAppRoot/index.d.ts",
+							"line": 8,
+							"character": 38
+						}
+					]
+				},
+				{
+					"id": 979,
+					"name": "SubAppRootOwnProperties",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 980,
+							"name": "appProperties",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/SubApp/SubAppRoot/index.d.ts",
+									"line": 4,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "PluridAppProperties"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								980
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "App/SubApp/SubAppRoot/index.d.ts",
+							"line": 3,
+							"character": 33
+						}
+					]
+				},
+				{
+					"id": 981,
+					"name": "SubAppRootStateProperties",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "App/SubApp/SubAppRoot/index.d.ts",
+							"line": 6,
+							"character": 35
+						}
+					]
+				},
+				{
+					"id": 983,
+					"name": "SubAppRootProperties",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "App/SubApp/SubAppRoot/index.d.ts",
+							"line": 10,
+							"character": 33
+						}
+					],
+					"type": {
+						"type": "intersection",
+						"types": [
+							{
+								"type": "reference",
+								"id": 979,
+								"name": "SubAppRootOwnProperties"
+							},
+							{
+								"type": "reference",
+								"id": 981,
+								"name": "SubAppRootStateProperties"
+							},
+							{
+								"type": "reference",
+								"id": 982,
+								"name": "SubAppRootDispatchProperties"
+							}
+						]
+					}
+				},
+				{
+					"id": 984,
+					"name": "_default",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "App/SubApp/SubAppRoot/index.d.ts",
+							"line": 11,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						982,
+						979,
+						981
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						983
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						984
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "App/SubApp/SubAppRoot/index.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 985,
+			"name": "\"App/SubApp/index.d\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/Cavel/Caveljan/i/theings/sauft/plurid/technologies/manual/packages/manual-generate/plurid/packages/@plurid/plurid-react/distribution/App/SubApp/index.d.ts",
+			"children": [
+				{
+					"id": 986,
+					"name": "PluridSubApp",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 988,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 989,
+									"name": "new PluridSubApp",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 990,
+											"name": "props",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "PluridAppProperties"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 986,
+										"name": "PluridSubApp"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "App/SubApp/index.d.ts",
+									"line": 4,
+									"character": 18
+								}
+							]
+						},
+						{
+							"id": 987,
+							"name": "store",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPrivate": true,
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "App/SubApp/index.d.ts",
+									"line": 4,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 991,
+							"name": "render",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 992,
+									"name": "render",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "JSX.Element"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "App/SubApp/index.d.ts",
+									"line": 6,
+									"character": 10
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								988
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								987
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								991
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "App/SubApp/index.d.ts",
+							"line": 3,
+							"character": 26
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "intrinsic",
+							"name": "any"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						986
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "App/SubApp/index.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 1006,
+			"name": "\"App/View/index.d\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/Cavel/Caveljan/i/theings/sauft/plurid/technologies/manual/packages/manual-generate/plurid/packages/@plurid/plurid-react/distribution/App/View/index.d.ts",
+			"children": [
+				{
+					"id": 1017,
+					"name": "ViewDispatchProperties",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 1018,
+							"name": "dispatch",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 23,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 1019,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "App/View/index.d.ts",
+													"line": 23,
+													"character": 28
+												}
+											]
+										}
+									},
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 1020,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "App/View/index.d.ts",
+													"line": 23,
+													"character": 31
+												}
+											]
+										}
+									},
+									{
+										"type": "reference",
+										"name": "AnyAction"
+									}
+								],
+								"name": "ThunkDispatch"
+							}
+						},
+						{
+							"id": 1038,
+							"name": "dispatchSetActiveDocument",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 41,
+									"character": 29
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 655,
+									"name": "setActiveDocument"
+								}
+							}
+						},
+						{
+							"id": 1026,
+							"name": "dispatchSetAnimatedTransform",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 29,
+									"character": 32
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 545,
+									"name": "setAnimatedTransform"
+								}
+							}
+						},
+						{
+							"id": 1021,
+							"name": "dispatchSetConfiguration",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 24,
+									"character": 28
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 92,
+									"name": "setConfiguration"
+								}
+							}
+						},
+						{
+							"id": 1022,
+							"name": "dispatchSetConfigurationMicro",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 25,
+									"character": 33
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 96,
+									"name": "setConfigurationMicro"
+								}
+							}
+						},
+						{
+							"id": 1023,
+							"name": "dispatchSetDocuments",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 26,
+									"character": 24
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 309,
+									"name": "setDocuments"
+								}
+							}
+						},
+						{
+							"id": 1030,
+							"name": "dispatchSetGeneralTheme",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 33,
+									"character": 27
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 888,
+									"name": "setGeneralTheme"
+								}
+							}
+						},
+						{
+							"id": 1031,
+							"name": "dispatchSetInteractionTheme",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 34,
+									"character": 31
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 892,
+									"name": "setInteractionTheme"
+								}
+							}
+						},
+						{
+							"id": 1025,
+							"name": "dispatchSetSpaceLoading",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 28,
+									"character": 27
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 541,
+									"name": "setSpaceLoading"
+								}
+							}
+						},
+						{
+							"id": 1027,
+							"name": "dispatchSetSpaceLocation",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 30,
+									"character": 28
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 549,
+									"name": "setSpaceLocation"
+								}
+							}
+						},
+						{
+							"id": 1029,
+							"name": "dispatchSetSpaceSize",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 32,
+									"character": 24
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 666,
+									"name": "setSpaceSize"
+								}
+							}
+						},
+						{
+							"id": 1028,
+							"name": "dispatchSetTree",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 31,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 651,
+									"name": "setTree"
+								}
+							}
+						},
+						{
+							"id": 1024,
+							"name": "dispatchSetViewSize",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 27,
+									"character": 23
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 662,
+									"name": "setViewSize"
+								}
+							}
+						},
+						{
+							"id": 1039,
+							"name": "dispatchSpaceSetView",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 42,
+									"character": 24
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 678,
+									"name": "spaceSetView"
+								}
+							}
+						},
+						{
+							"id": 1032,
+							"name": "rotateXWith",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 35,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 593,
+									"name": "rotateXWith"
+								}
+							}
+						},
+						{
+							"id": 1033,
+							"name": "rotateYWith",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 36,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 607,
+									"name": "rotateYWith"
+								}
+							}
+						},
+						{
+							"id": 1037,
+							"name": "scaleDownWith",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 40,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 647,
+									"name": "scaleDownWith"
+								}
+							}
+						},
+						{
+							"id": 1036,
+							"name": "scaleUpWith",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 39,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 643,
+									"name": "scaleUpWith"
+								}
+							}
+						},
+						{
+							"id": 1034,
+							"name": "translateXWith",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 37,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 629,
+									"name": "translateXWith"
+								}
+							}
+						},
+						{
+							"id": 1035,
+							"name": "translateYWith",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 38,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 633,
+									"name": "translateYWith"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								1018,
+								1038,
+								1026,
+								1021,
+								1022,
+								1023,
+								1030,
+								1031,
+								1025,
+								1027,
+								1029,
+								1028,
+								1024,
+								1039,
+								1032,
+								1033,
+								1037,
+								1036,
+								1034,
+								1035
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "App/View/index.d.ts",
+							"line": 22,
+							"character": 32
+						}
+					]
+				},
+				{
+					"id": 1007,
+					"name": "ViewOwnProperties",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 1008,
+							"name": "appProperties",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 11,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "PluridAppProperties"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								1008
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "App/View/index.d.ts",
+							"line": 10,
+							"character": 34
+						}
+					]
+				},
+				{
+					"id": 1009,
+					"name": "ViewStateProperties",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 1016,
+							"name": "activeDocumentID",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 20,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 1010,
+							"name": "configuration",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 14,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "PluridAppConfiguration"
+							}
+						},
+						{
+							"id": 1011,
+							"name": "dataDocuments",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 15,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "PluridInternalStateDocument"
+									}
+								],
+								"name": "Indexed"
+							}
+						},
+						{
+							"id": 1013,
+							"name": "spaceLoading",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 17,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						},
+						{
+							"id": 1014,
+							"name": "transform",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 18,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 1015,
+							"name": "tree",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 19,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "TreePage"
+								}
+							}
+						},
+						{
+							"id": 1012,
+							"name": "viewSize",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "App/View/index.d.ts",
+									"line": 16,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 1003,
+								"name": "ViewSize"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								1016,
+								1010,
+								1011,
+								1013,
+								1014,
+								1015,
+								1012
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "App/View/index.d.ts",
+							"line": 13,
+							"character": 29
+						}
+					]
+				},
+				{
+					"id": 1040,
+					"name": "ViewProperties",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "App/View/index.d.ts",
+							"line": 44,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "intersection",
+						"types": [
+							{
+								"type": "reference",
+								"id": 1007,
+								"name": "ViewOwnProperties"
+							},
+							{
+								"type": "reference",
+								"id": 1009,
+								"name": "ViewStateProperties"
+							},
+							{
+								"type": "reference",
+								"id": 1017,
+								"name": "ViewDispatchProperties"
+							}
+						]
+					}
+				},
+				{
+					"id": 1041,
+					"name": "_default",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "App/View/index.d.ts",
+							"line": 45,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						1017,
+						1007,
+						1009
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						1040
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						1041
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "App/View/index.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 1042,
+			"name": "\"App/View/logic.d\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/Cavel/Caveljan/i/theings/sauft/plurid/technologies/manual/packages/manual-generate/plurid/packages/@plurid/plurid-react/distribution/App/View/logic.d.ts",
+			"children": [
+				{
+					"id": 1043,
+					"name": "handleView",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "App/View/logic.d.ts",
+							"line": 3,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 1044,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 1045,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 1046,
+											"name": "pages",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "PluridPage"
+														}
+													},
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													}
+												]
+											}
+										},
+										{
+											"id": 1047,
+											"name": "documents",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "PluridDocument"
+														}
+													},
+													{
+														"type": "intrinsic",
+														"name": "undefined"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "JSX.Element"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "App/View/logic.d.ts",
+									"line": 3,
+									"character": 25
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						1043
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "App/View/logic.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 1048,
+			"name": "\"App/View/styled.d\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/Cavel/Caveljan/i/theings/sauft/plurid/technologies/manual/packages/manual-generate/plurid/packages/@plurid/plurid-react/distribution/App/View/styled.d.ts",
+			"children": [
+				{
+					"id": 1049,
+					"name": "GlobalStyle",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "App/View/styled.d.ts",
+							"line": 1,
+							"character": 32
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
+					"id": 1050,
+					"name": "StyledView",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "App/View/styled.d.ts",
+							"line": 2,
+							"character": 31
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						1049,
+						1050
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "App/View/styled.d.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "External modules",
+			"kind": 1,
+			"children": [
+				973,
+				978,
+				985,
+				1006,
+				1042,
+				1048,
+				1051,
+				1076,
+				1053,
+				1077,
+				1079,
+				1087,
+				1089,
+				1093,
+				1095,
+				1107,
+				1112,
+				1129,
+				1131,
+				1139,
+				1141,
+				1157,
+				1160,
+				1168,
+				1170,
+				1066,
+				1180,
+				1182,
+				1195,
+				1198,
+				1211,
+				1215,
+				1225,
+				1230,
+				1238,
+				1251,
+				1263,
+				1276,
+				1286,
+				1298,
+				1304,
+				1315,
+				1319,
+				1336,
+				1338,
+				1353,
+				1355,
+				1372,
+				1374,
+				1384,
+				1386,
+				1392,
+				1404,
+				1409,
+				1427,
+				1430,
+				1439,
+				1443,
+				1455,
+				1460,
+				1466,
+				1468,
+				1472,
+				1474,
+				1477,
+				1479,
+				1491,
+				1513,
+				1530,
+				1535,
+				1537,
+				1550,
+				1569,
+				1559,
+				1573,
+				1582,
+				1595,
+				1600,
+				1623,
+				993,
+				1640,
+				91,
+				299,
+				179,
+				181,
+				187,
+				1,
+				308,
+				327,
+				313,
+				315,
+				321,
+				300,
+				338,
+				362,
+				345,
+				347,
+				353,
+				328,
+				540,
+				873,
+				682,
+				684,
+				690,
+				363,
+				887,
+				915,
+				896,
+				898,
+				904,
+				874,
+				924,
+				943,
+				929,
+				931,
+				937,
+				916,
+				1642,
+				1649,
+				1656,
+				1744,
+				1802,
+				1813,
+				964,
+				944,
+				955,
+				946,
+				1002,
+				1820,
+				1827
+			]
+		}
+	]
+}

@@ -26,7 +26,8 @@ import StateContext from '../../services/state/context';
 import selectors from '../../services/state/selectors';
 // import actions from '../../services/state/actions';
 
-import testdata from '../../../../test/data/@plurid/plurid-react.json';
+// import testdata from '../../../../test/data/@plurid/plurid-react.json';
+import testdata from '../../../../test/data/@plurid/plurid-react-small.json';
 
 
 interface SpaceOwnProperties {
@@ -72,6 +73,8 @@ const Space: React.FC<SpaceProperties> = (
         };
         return pluridPage;
     });
+
+    console.log(pluridPages);
 
     const view = testdata.children.map(element => {
         return '/' + element.id;
