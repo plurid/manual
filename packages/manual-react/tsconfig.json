@@ -24,6 +24,7 @@
         "noUnusedParameters": false,
         "esModuleInterop": true,
         "downlevelIteration": true,
+        "resolveJsonModule": true,
         "typeRoots": [
             "node_modules/@types"
         ]
