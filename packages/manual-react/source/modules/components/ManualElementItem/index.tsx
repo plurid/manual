@@ -53,7 +53,23 @@ const ManualElement: React.FC<ManualElementProperties> = (
     return (
         <StyledManualElement>
             <div>
-                {data.kindString} - {data.name} - {data.type?.name} - {data.comment?.shortText} - {data.comment?.text}
+                {data.comment && (
+                    <div>
+                        {data.comment.shortText && (
+                            <p>
+                                {data.comment.shortText}
+                            </p>
+                        )}
+
+                        {data.comment.text && (
+                            <p>
+                                {data.comment.text}
+                            </p>
+                        )}
+                    </div>
+                )}
+
+                {data.kindString} - {data.name} - {data.type?.name}
             </div>
 
             {data.children && data.children.map((child: any) => {
@@ -64,14 +80,46 @@ const ManualElement: React.FC<ManualElementProperties> = (
                             margin: '10px 30px',
                         }}
                     >
-                        {child.kindString} - {child.name} - {child.type?.name} - {child.comment?.shortText} - {child.comment?.text}
+                        {child.comment && (
+                            <div>
+                                {child.comment.shortText && (
+                                    <p>
+                                        {child.comment.shortText}
+                                    </p>
+                                )}
+
+                                {child.comment.text && (
+                                    <p>
+                                        {child.comment.text}
+                                    </p>
+                                )}
+                            </div>
+                        )}
+
+                        {child.kindString} - {child.name} - {child.type?.name}
 
                         {child.children && child.children.map((child: any) => {
                             return (
                                 <div
                                     key={child.id}
                                 >
-                                    {child.kindString} - {child.name} - {child.type.name} - {child.comment?.shortText} - {child.comment?.text}
+                                    {child.comment && (
+                                        <div>
+                                            {child.comment.shortText && (
+                                                <p>
+                                                    {child.comment.shortText}
+                                                </p>
+                                            )}
+
+                                            {child.comment.text && (
+                                                <p>
+                                                    {child.comment.text}
+                                                </p>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {child.kindString} - {child.name} - {child.type.name}
                                 </div>
                             );
                         })}
