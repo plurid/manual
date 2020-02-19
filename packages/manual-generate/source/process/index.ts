@@ -121,7 +121,7 @@ const handlePackages = async (
         typedocApp.generateJson(filteredPackageFiles, dataPath);
 
         console.log(`\n\tExtracted documentation data for package ${packageData.name} to:`);
-        console.log(`\t${dataPath}`);
+        console.log(`\t${dataPath}\n`);
     }
 
     console.log(`\n`);
