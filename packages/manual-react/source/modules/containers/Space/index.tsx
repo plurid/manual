@@ -55,7 +55,7 @@ const Space: React.FC<SpaceProperties> = (
         {
             path: '/',
             component: {
-                element: () => <></>,
+                element: () => <>manual</>,
                 properties: {},
             },
         },
