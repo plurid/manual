@@ -1,5 +1,7 @@
 import path from 'path';
-import fs from 'fs';
+import fs, {
+    promises as asyncfs,
+} from 'fs';
 
 import {
     CommanderStatic,
@@ -13,19 +15,44 @@ import {
 
 
 
+const createGitIgnore = async (
+    directoryPath: string,
+) => {
+    const gitIgnorePath = path.join(directoryPath, '/.gitignore');
+
+    if (!fs.existsSync(gitIgnorePath)){
+        await asyncfs.writeFile(gitIgnorePath, './packages');
+    }
+}
+
+
 const handlePackages = async (
     data: ManualGenerate,
 ) => {
     const directoryPath = path.join(process.cwd(), data.target);
 
     if (!fs.existsSync(directoryPath)){
+        console.log(`\n\tCreated directory: ${directoryPath}`);
+
         fs.mkdirSync(directoryPath);
+        createGitIgnore(directoryPath);
     }
 
+    const packagePaths = [];
+
     for (const dataPackage of data.packages) {
-        const packagePath = path.join(directoryPath, `/packages/${dataPackage}`)
+        const packagePath = path.join(directoryPath, `/packages/${dataPackage}`);
+        packagePaths.push(packagePath);
+
+        console.log(`\n\tDownloading package ${dataPackage}`);
+
         await pacote.extract(dataPackage, packagePath);
     }
+
+    console.log(`\n`);
+
+    // parse downloaded packages
+
 }
 
 
