@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+    useState,
+} from 'react';
 
 import { AnyAction } from 'redux';
 import { connect } from 'react-redux';
@@ -24,7 +26,7 @@ import StateContext from '../../services/state/context';
 import selectors from '../../services/state/selectors';
 // import actions from '../../services/state/actions';
 
-// import testdata from '../../../../test/data/@plurid/plurid-react.json';
+import testdata from '../../../../test/data/@plurid/plurid-react.json';
 
 
 interface SpaceOwnProperties {
@@ -52,22 +54,40 @@ const Space: React.FC<SpaceProperties> = (
         // stateInteractionTheme,
     // } = properties;
 
+    // const [pluridPages, setPluridPages] = useState([]);
 
-    const pages: PluridPage[] = [
-        {
-            path: '/',
+    const pluridPages = testdata.children.map(element => {
+        const pluridPage: PluridPage = {
+            path: '/' + element.id,
             component: {
                 element: () => (
                     <ManualElement>
                         <div>
-                            element
+                            {element.kindString} - {element.name}
                         </div>
                     </ManualElement>
                 ),
                 properties: {},
             },
-        },
-    ];
+        };
+        return pluridPage;
+    });
+
+    // const pages: PluridPage[] = [
+    //     {
+    //         path: '/',
+    //         component: {
+    //             element: () => (
+    //                 <ManualElement>
+    //                     <div>
+    //                         element
+    //                     </div>
+    //                 </ManualElement>
+    //             ),
+    //             properties: {},
+    //         },
+    //     },
+    // ];
 
     const view = [
         '/',
@@ -78,7 +98,7 @@ const Space: React.FC<SpaceProperties> = (
     return (
         <StyledSpace>
             <PluridSubApp
-                pages={pages}
+                pages={pluridPages}
                 view={view}
             />
         </StyledSpace>
