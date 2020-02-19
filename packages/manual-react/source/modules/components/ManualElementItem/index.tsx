@@ -5,6 +5,10 @@ import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import {
+    PluridLink,
+} from '@plurid/plurid-react';
+
+import {
     Theme,
 } from '@plurid/plurid-themes';
 
@@ -52,7 +56,11 @@ const ManualElement: React.FC<ManualElementProperties> = (
     /** render */
     return (
         <StyledManualElement>
-            <div>
+            <div
+                style={{
+                    marginBottom: '20px',
+                }}
+            >
                 {data.comment && (
                     <div>
                         {data.comment.shortText && (
@@ -78,6 +86,7 @@ const ManualElement: React.FC<ManualElementProperties> = (
                         key={child.id}
                         style={{
                             margin: '10px 30px',
+                            marginBottom: '50px',
                         }}
                     >
                         {child.comment && (
@@ -96,12 +105,26 @@ const ManualElement: React.FC<ManualElementProperties> = (
                             </div>
                         )}
 
-                        {child.kindString} - {child.name} - {child.type?.name}
+                        {child.kindString} - {child.name}
+
+                        {child.type && (
+                            <>
+                                &nbsp;-&nbsp;
+                                <PluridLink
+                                    page={'/' + (child.type.id || Math.random())}
+                                >
+                                    {child.type.name}
+                                </PluridLink>
+                            </>
+                        )}
 
                         {child.children && child.children.map((child: any) => {
                             return (
                                 <div
                                     key={child.id}
+                                    style={{
+                                        marginBottom: '20px',
+                                    }}
                                 >
                                     {child.comment && (
                                         <div>

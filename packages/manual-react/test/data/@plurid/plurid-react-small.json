@@ -103,7 +103,7 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 28,
+								"id": 371,
 								"typeArguments": [
 									{
 										"type": "intrinsic",
@@ -249,7 +249,7 @@
 							"character": 26
 						}
 					]
-				}
+                }
 			],
 			"groups": [
 				{
@@ -267,7 +267,7 @@
 					"character": 0
 				}
 			]
-		},
+        },
 		{
 			"id": 973,
 			"name": "\"App/Root/index.d\"",
@@ -1769,6 +1769,62 @@
 					"character": 0
 				}
 			]
+        },
+        {
+            "id": 371,
+            "name": "PluridPageContext",
+            "kind": 16777216,
+            "kindString": "Reference",
+            "flags": {
+                "isExported": true
+            },
+            "target": 28
+        },
+        {
+            "id": 207,
+            "name": "RecursivePartial",
+            "kind": 4194304,
+            "kindString": "Type alias",
+            "flags": {
+                "isExported": true
+            },
+            "typeParameter": [
+                {
+                    "id": 208,
+                    "name": "T",
+                    "kind": 131072,
+                    "kindString": "Type parameter",
+                    "flags": {
+                        "isExported": true
+                    }
+                }
+            ],
+            "sources": [
+                {
+                    "fileName": "interfaces/helpers.d.ts",
+                    "line": 8,
+                    "character": 36
+                }
+            ],
+            "type": {
+                "type": "reflection",
+                "declaration": {
+                    "id": 209,
+                    "name": "__type",
+                    "kind": 65536,
+                    "kindString": "Type literal",
+                    "flags": {
+                        "isExported": true
+                    },
+                    "sources": [
+                        {
+                            "fileName": "interfaces/helpers.d.ts",
+                            "line": 8,
+                            "character": 41
+                        }
+                    ]
+                }
+            }
         }
 	],
 	"groups": [
