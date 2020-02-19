@@ -1,6 +1,6 @@
 {
     "name": "@plurid/manual-generate",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Generate plurid' manual data from software packages",
     "keywords": [
         "plurid",
@@ -28,7 +28,7 @@
     "module": "distribution/manual-generate.es5.js",
     "typings": "distribution/types/index.d.ts",
     "bin": {
-        "plurimanual": "bin/manual-generate"
+        "plurimanual": "binary/manual-generate"
     },
     "files": [
         "distribution",
