@@ -12,8 +12,6 @@ import {
     StyledManualElement,
 } from './styled';
 
-import ManualElementItem from '../ManualElementItem';
-
 import { AppState } from '../../services/state/store';
 import StateContext from '../../services/state/context';
 import selectors from '../../services/state/selectors';
@@ -60,10 +58,24 @@ const ManualElement: React.FC<ManualElementProperties> = (
 
             {data.children && data.children.map((child: any) => {
                 return (
-                    <ManualElementItem
+                    <div
                         key={child.id}
-                        data={child}
-                    />
+                        style={{
+                            margin: '10px 30px',
+                        }}
+                    >
+                        {child.kindString} - {child.name}
+
+                        {child.children && child.children.map((child: any) => {
+                            return (
+                                <div
+                                    key={child.id}
+                                >
+                                    {child.kindString} - {child.name}
+                                </div>
+                            );
+                        })}
+                    </div>
                 );
             })}
         </StyledManualElement>
