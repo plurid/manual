@@ -3,5 +3,5 @@ module.exports = {
     packages: [
         '@plurid/plurid-react',
     ],
-    target: './source/modules/data/manuals/data',
+    target: './test/data',
 };
