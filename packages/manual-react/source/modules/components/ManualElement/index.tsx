@@ -20,6 +20,7 @@ import selectors from '../../services/state/selectors';
 
 
 interface ManualElementOwnProperties {
+    data: any;
 }
 
 interface ManualElementStateProperties {
@@ -40,7 +41,7 @@ const ManualElement: React.FC<ManualElementProperties> = (
     /** properties */
     const {
         /** own */
-        children,
+        data,
 
         /** state */
         // stateGeneralTheme,
@@ -51,7 +52,29 @@ const ManualElement: React.FC<ManualElementProperties> = (
     /** render */
     return (
         <StyledManualElement>
-            {children}
+            <div>
+                {data.kindString} - {data.name}
+            </div>
+
+            {data.children && data.children.map((child: any) => {
+                return (
+                    <div
+                        key={child.id}
+                    >
+                        {child.kindString} - {child.name}
+
+                        {child.children && child.children.map((child: any) => {
+                            return (
+                                <div
+                                    key={child.id}
+                                >
+                                    {child.kindString} - {child.name}
+                                </div>
+                            );
+                        })}
+                    </div>
+                );
+            })}
         </StyledManualElement>
     );
 }
