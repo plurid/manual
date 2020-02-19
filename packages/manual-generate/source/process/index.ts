@@ -120,7 +120,7 @@ const handlePackages = async (
         });
         typedocApp.generateJson(filteredPackageFiles, dataPath);
 
-        console.log(`\tExtracted documentation data for package ${packageData.name}`);
+        console.log(`\n\tExtracted documentation data for package ${packageData.name} to:`);
         console.log(`\t${dataPath}`);
     }
 
