@@ -73,25 +73,9 @@ const Space: React.FC<SpaceProperties> = (
         return pluridPage;
     });
 
-    // const pages: PluridPage[] = [
-    //     {
-    //         path: '/',
-    //         component: {
-    //             element: () => (
-    //                 <ManualElement>
-    //                     <div>
-    //                         element
-    //                     </div>
-    //                 </ManualElement>
-    //             ),
-    //             properties: {},
-    //         },
-    //     },
-    // ];
-
-    const view = [
-        '/',
-    ];
+    const view = testdata.children.map(element => {
+        return '/' + element.id;
+    });
 
 
     /** render */
