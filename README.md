@@ -26,6 +26,15 @@ Documentation for software packages
 [manual-data]: https://github.com/plurid/manual/tree/master/packages/manual-data
 
 
+<a target="_blank" href="https://www.npmjs.com/package/@plurid/manual-generate">
+    <img src="https://img.shields.io/npm/v/@plurid/manual-generate.svg?logo=npm&colorB=1380C3&style=for-the-badge" alt="Version">
+</a>
+
+[@plurid/manual-generate][manual-generate] • generate manual documentation data from software packages
+
+[manual-generate]: https://github.com/plurid/manual/tree/master/packages/manual-generate
+
+
 <a target="_blank" href="https://www.npmjs.com/package/@plurid/manual-react">
     <img src="https://img.shields.io/npm/v/@plurid/manual-react.svg?logo=npm&colorB=1380C3&style=for-the-badge" alt="Version">
 </a>
