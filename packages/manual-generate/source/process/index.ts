@@ -55,6 +55,11 @@ const createGitIgnore = async (
 }
 
 
+interface Package {
+    name: string;
+    path: string;
+}
+
 const handlePackages = async (
     data: ManualGenerate,
 ) => {
@@ -72,15 +77,19 @@ const handlePackages = async (
     /**
      * Download packages
      */
-    const packagePaths = [];
+    const packages: Package[] = [];
 
-    for (const dataPackage of data.packages) {
-        const packagePath = path.join(directoryPath, `/packages/${dataPackage}`);
-        packagePaths.push(packagePath);
+    for (const packageName of data.packages) {
+        const packagePath = path.join(directoryPath, `/packages/${packageName}`);
+        const packageData = {
+            name: packageName,
+            path: packagePath,
+        };
+        packages.push(packageData);
 
-        console.log(`\n\tDownloading package ${dataPackage}`);
+        console.log(`\n\tDownloading package ${packageName}`);
 
-        await pacote.extract(dataPackage, packagePath);
+        await pacote.extract(packageName, packagePath);
     }
 
     console.log(`\n`);
@@ -89,9 +98,9 @@ const handlePackages = async (
     /**
      * Parse downloaded packages.
      */
-    for (const packagePath of packagePaths) {
-        const packageDocs = path.join(directoryPath, `/docs/${packagePath}`);
-        const packageFiles = walkSync(packagePath, []);
+    for (const packageData of packages) {
+        const packageDocs = path.join(directoryPath, `/documentation/${packageData.name}`);
+        const packageFiles = walkSync(packageData.path, []);
         const filteredPackageFiles = packageFiles.filter(packageFile => {
             const extension = path.extname(packageFile);
 
