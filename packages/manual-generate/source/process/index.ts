@@ -5,13 +5,15 @@ import {
     CommanderStatic,
 } from 'commander';
 
+import pacote from 'pacote';
+
 import {
     ManualGenerate,
 } from '../data/interfaces';
 
 
 
-const handlePackages = (
+const handlePackages = async (
     data: ManualGenerate,
 ) => {
     const directoryPath = path.join(process.cwd(), data.target);
@@ -20,6 +22,10 @@ const handlePackages = (
         fs.mkdirSync(directoryPath);
     }
 
+    for (const dataPackage of data.packages) {
+        const packagePath = path.join(directoryPath, `/packages/${dataPackage}`)
+        await pacote.extract(dataPackage, packagePath);
+    }
 }
 
 
