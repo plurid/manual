@@ -71,7 +71,7 @@ const ManualElement: React.FC<ManualElementProperties> = (
                                 <div
                                     key={child.id}
                                 >
-                                    {child.kindString} - {child.name}
+                                    {child.kindString} - {child.name} - {child.type.name}
                                 </div>
                             );
                         })}
