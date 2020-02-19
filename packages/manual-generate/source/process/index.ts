@@ -99,7 +99,7 @@ const handlePackages = async (
      * Parse downloaded packages.
      */
     for (const packageData of packages) {
-        const documentationPath = path.join(directoryPath, `/documentation/${packageData.name}`);
+        const dataPath = path.join(directoryPath, `/data/${packageData.name}.json`);
         const packageFiles = walkSync(packageData.path, []);
         const filteredPackageFiles = packageFiles.filter(packageFile => {
             const extension = path.extname(packageFile);
@@ -118,10 +118,10 @@ const handlePackages = async (
             ignoreCompilerErrors: true,
             logger: 'none',
         });
-        typedocApp.generateJson(filteredPackageFiles, documentationPath);
+        typedocApp.generateJson(filteredPackageFiles, dataPath);
 
         console.log(`\tExtracted documentation data for package ${packageData.name}`);
-        console.log(`\t${documentationPath}`);
+        console.log(`\t${dataPath}`);
     }
 
     console.log(`\n`);
