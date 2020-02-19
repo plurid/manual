@@ -1,5 +1,5 @@
 import React, {
-    // useEffect,
+    useEffect,
     // useState,
     // useCallback,
     useRef,
@@ -39,7 +39,7 @@ import ToolbarMetadata from '../../modules/components/ToolbarMetadata';
 
 import { AppState } from '../../modules/services/state/store';
 // import selectors from '../../modules/services/state/selectors';
-// import actions from '../../modules/services/state/actions';
+import actions from '../../modules/services/state/actions';
 
 import StateContext from '../../modules/services/state/context';
 
@@ -54,6 +54,7 @@ interface ViewStateProperties {
 
 interface ViewDispatchProperties {
     dispatch: ThunkDispatch<{}, {}, AnyAction>;
+    dispatchSetMetadata: typeof actions.data.setMetadata;
 }
 
 type ViewProperties = ViewOwnProperties
@@ -64,20 +65,21 @@ const View: React.FC<ViewProperties> = (
     properties,
 ) => {
     /** properties */
-    // const {
-    //     /** own */
-    //     appProperties,
+    const {
+        /** own */
+        appProperties,
 
-    //     /** state */
+        /** state */
 
-    //     /** dispatch */
-    //     // dispatch,
-    // } = properties;
+        /** dispatch */
+        // dispatch,
+        dispatchSetMetadata,
+    } = properties;
 
-    // const {
-    //     modules,
-    //     metadata,
-    // } = appProperties;
+    const {
+        // modules,
+        metadata,
+    } = appProperties;
 
 
     /** references */
@@ -88,6 +90,15 @@ const View: React.FC<ViewProperties> = (
 
 
     /** callbacks */
+
+
+    /** effects */
+    /** Handle Metadata */
+    useEffect(() => {
+        dispatchSetMetadata(metadata);
+    }, [
+        metadata,
+    ]);
 
 
     /** render */
@@ -128,6 +139,11 @@ const mapDispatchToProperties = (
     dispatch: ThunkDispatch<{}, {}, AnyAction>,
 ): ViewDispatchProperties => ({
     dispatch,
+    dispatchSetMetadata: (
+        payload,
+    ) => dispatch(
+        actions.data.setMetadata(payload),
+    ),
 });
 
 

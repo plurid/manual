@@ -5,6 +5,10 @@ import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import {
+    ManualMetadata,
+} from '@plurid/manual-data';
+
+import {
     Theme,
 } from '@plurid/plurid-themes';
 
@@ -32,6 +36,7 @@ interface ToolbarMetadataOwnProperties {
 interface ToolbarMetadataStateProperties {
     stateGeneralTheme: Theme;
     stateInteractionTheme: Theme;
+    stateMetadata: ManualMetadata;
 }
 
 interface ToolbarMetadataDispatchProperties {
@@ -49,7 +54,12 @@ const ToolbarMetadata: React.FC<ToolbarMetadataProperties> = (
         /** state */
         // stateGeneralTheme,
         stateInteractionTheme,
+        stateMetadata,
     } = properties;
+
+    const {
+        name,
+    } = stateMetadata;
 
 
     /** render */
@@ -63,7 +73,7 @@ const ToolbarMetadata: React.FC<ToolbarMetadataProperties> = (
                         margin: '0 15px',
                     }}
                 >
-                    name
+                    {name}
                 </div>
 
                 <ToolbarButton
@@ -86,6 +96,7 @@ const mapStateToProperties = (
 ): ToolbarMetadataStateProperties => ({
     stateGeneralTheme: selectors.themes.getGeneralTheme(state),
     stateInteractionTheme: selectors.themes.getInteractionTheme(state),
+    stateMetadata: selectors.data.getMetadata(state),
 });
 
 
