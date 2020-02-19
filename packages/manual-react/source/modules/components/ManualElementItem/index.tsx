@@ -53,7 +53,7 @@ const ManualElement: React.FC<ManualElementProperties> = (
     return (
         <StyledManualElement>
             <div>
-                {data.kindString} - {data.name} - {data.type?.name} - {data.comment?.text}
+                {data.kindString} - {data.name} - {data.type?.name} - {data.comment?.shortText} - {data.comment?.text}
             </div>
 
             {data.children && data.children.map((child: any) => {
@@ -64,14 +64,14 @@ const ManualElement: React.FC<ManualElementProperties> = (
                             margin: '10px 30px',
                         }}
                     >
-                        {child.kindString} - {child.name} - {child.type?.name} - {child.comment?.text}
+                        {child.kindString} - {child.name} - {child.type?.name} - {child.comment?.shortText} - {child.comment?.text}
 
                         {child.children && child.children.map((child: any) => {
                             return (
                                 <div
                                     key={child.id}
                                 >
-                                    {child.kindString} - {child.name} - {child.type.name} - {child.comment?.text}
+                                    {child.kindString} - {child.name} - {child.type.name} - {child.comment?.shortText} - {child.comment?.text}
                                 </div>
                             );
                         })}
