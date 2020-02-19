@@ -87,7 +87,17 @@ const handlePackages = async (
     for (const packagePath of packagePaths) {
         const packageDocs = path.join(directoryPath, `/docs/${packagePath}`);
         const packageFiles = walkSync(packagePath, []);
-        typedocApp.generateJson(packageFiles, packageDocs);
+        const filteredPackageFiles = packageFiles.filter(packageFile => {
+            const extension = path.extname(packageFile);
+
+            if (extension === '.ts' || extension === '.tsx' || extension === '.d.ts') {
+                return true;
+            }
+
+            return false;
+        });
+
+        typedocApp.generateJson(filteredPackageFiles, packageDocs);
     }
 }
 
