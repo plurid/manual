@@ -1,4 +1,5 @@
 import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import url from '@rollup/plugin-url';
@@ -31,6 +32,7 @@ export default {
         replace({
             'process.env.MODE_ENV': JSON.stringify(process.env.MODE_ENV),
         }),
+        json(),
         external(),
         postcss({
             modules: true,
