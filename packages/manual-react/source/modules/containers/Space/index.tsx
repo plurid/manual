@@ -9,6 +9,8 @@ import { ThunkDispatch } from 'redux-thunk';
 import {
     PluridSubApp,
     PluridPage,
+    PluridConfiguration,
+    RecursivePartial,
 } from '@plurid/plurid-react';
 
 import {
@@ -62,11 +64,9 @@ const Space: React.FC<SpaceProperties> = (
             path: '/' + element.id,
             component: {
                 element: () => (
-                    <ManualElement>
-                        <div>
-                            {element.kindString} - {element.name}
-                        </div>
-                    </ManualElement>
+                    <ManualElement
+                        data={element}
+                    />
                 ),
                 properties: {},
             },
@@ -74,11 +74,17 @@ const Space: React.FC<SpaceProperties> = (
         return pluridPage;
     });
 
-    console.log(pluridPages);
-
     const view = testdata.children.map(element => {
         return '/' + element.id;
     });
+
+    const pluridConfiguration: RecursivePartial<PluridConfiguration> = {
+        elements: {
+            plane: {
+                width: 0.5,
+            },
+        },
+    };
 
 
     /** render */
@@ -87,6 +93,7 @@ const Space: React.FC<SpaceProperties> = (
             <PluridSubApp
                 pages={pluridPages}
                 view={view}
+                configuration={pluridConfiguration}
             />
         </StyledSpace>
     );
