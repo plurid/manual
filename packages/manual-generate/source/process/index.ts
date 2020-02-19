@@ -117,14 +117,14 @@ const handlePackages = async (
         typedocApp.bootstrap({
             ignoreCompilerErrors: true,
             logger: 'none',
+            includeDeclarations: true,
+            exclude: ["node_modules/**", "**/"],
         });
         typedocApp.generateJson(filteredPackageFiles, dataPath);
 
         console.log(`\n\tExtracted documentation data for package ${packageData.name} to:`);
         console.log(`\t${dataPath}\n`);
     }
-
-    console.log(`\n`);
 }
 
 
