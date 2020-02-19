@@ -111,12 +111,17 @@ const handlePackages = async (
             return false;
         });
 
+        console.log(`\n\tExtracting documentation data for package ${packageData.name}`);
+
         const typedocApp = new typedoc.Application();
         typedocApp.bootstrap({
             ignoreCompilerErrors: true,
+            logger: 'none',
         });
         typedocApp.generateJson(filteredPackageFiles, packageDocs);
     }
+
+    console.log(`\n`);
 }
 
 
