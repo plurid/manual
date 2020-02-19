@@ -17,6 +17,33 @@ import {
 
 
 
+/**
+ * List all files in a directory in Node.js recursively in a synchronous fashion
+ * https://gist.github.com/kethinov/6658166
+ *
+ * @param dir
+ * @param filelist
+ */
+const walkSync = (
+    dir: string,
+    filelist: any[],
+) => {
+    const files = fs.readdirSync(dir);
+    filelist = filelist || [];
+
+    files.forEach(function(file) {
+        if (fs.statSync(path.join(dir, file)).isDirectory()) {
+            filelist = walkSync(path.join(dir, file), filelist);
+        }
+        else {
+            filelist.push(path.join(dir, file));
+        }
+    });
+
+    return filelist;
+};
+
+
 const createGitIgnore = async (
     directoryPath: string,
 ) => {
@@ -55,12 +82,12 @@ const handlePackages = async (
     console.log(`\n`);
 
     // parse downloaded packages
-    // const typedocApp = new typedoc.Application();
+    const typedocApp = new typedoc.Application();
 
     for (const packagePath of packagePaths) {
         const packageDocs = path.join(directoryPath, `/docs/${packagePath}`);
-        const packageFiles = await asyncfs.readdir(packageDocs);
-        console.log(packageFiles);
+        const packageFiles = walkSync(packagePath, []);
+        typedocApp.generateJson(packageFiles, packageDocs);
     }
 }
 
