@@ -1,4 +1,5 @@
 import path from 'path';
+import fs from 'fs';
 
 import {
     CommanderStatic,
@@ -13,6 +14,11 @@ import {
 const handlePackages = (
     data: ManualGenerate,
 ) => {
+    const directoryPath = path.join(process.cwd(), data.target);
+
+    if (!fs.existsSync(directoryPath)){
+        fs.mkdirSync(directoryPath);
+    }
 
 }
 
