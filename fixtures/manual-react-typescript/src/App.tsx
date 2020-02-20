@@ -3,12 +3,18 @@ import React from 'react';
 import ManualApp, {
     ManualModule,
     ManualMetadata,
-    ManualData,
+    // ManualData,
+    // ManualElementKind,
 } from '@plurid/manual-react';
+
+// import {
+//     JSONOutput,
+// } from 'typedoc';
 
 import pluridReactData from './testdata/data/@plurid/plurid-react-small.json';
 
 
+// console.log(ManualElementKind);
 
 const App = () => {
     const modules: ManualModule[] = [
@@ -22,16 +28,27 @@ const App = () => {
         name: '@plurid/plurid-react',
     };
 
-    const data: ManualData.ProjectReflection[] = [
-        pluridReactData,
-    ];
+    // const data: JSONOutput.ProjectReflection[] = [
+    //     pluridReactData,
+    // ];
+
+    // const data: ManualData.ProjectReflection[] = [
+    //     pluridReactData,
+    // ];
+
+    // const a = 128;
+
+    // if (a === ManualElementKind.Class) {
+    //     console.log('ffooo');
+    // }
 
     return (
         <div>
             <ManualApp
                 modules={modules}
                 metadata={metadata}
-                data={data}
+                // data={[pluridReactData]}
+                // data={data}
             />
         </div>
     );
