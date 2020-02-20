@@ -1,3 +1,8 @@
-export enum MANUAL_SHORTCUTS {
-    S = 'S',
+import {
+    ReflectionKind as ManualElementKind,
+} from 'typedoc';
+
+
+export {
+    ManualElementKind,
 }
