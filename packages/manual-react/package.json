@@ -59,10 +59,9 @@
         "styled-components": ">=4"
     },
     "dependencies": {
-        "@plurid/manual-data": "^0.1.2",
+        "@plurid/manual-data": "^0.1.3",
         "hammerjs": "^2.0.8",
-        "redux-devtools-extension": "^2.13.8",
-        "typedoc": "^0.16.10"
+        "redux-devtools-extension": "^2.13.8"
     },
     "devDependencies": {
         "@babel/core": "^7.8.4",
