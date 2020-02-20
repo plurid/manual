@@ -5,7 +5,7 @@ import React, {
 
 import ManualApp from '@plurid/manual-react';
 
-import data from '../test/data/@plurid/plurid-react-small.json';
+import data from './testdata/data/@plurid/plurid-react-small.json';
 
 
 
