@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
 import {
-    JSONOutput,
-} from 'typedoc';
+    ManualData,
+} from '@plurid/manual-data';
 
 import {
     PluridSubApp,
@@ -34,7 +34,7 @@ import selectors from '../../services/state/selectors';
 
 
 interface SpaceOwnProperties {
-    data?: JSONOutput.ProjectReflection[];
+    data?: ManualData.ProjectReflection[];
 }
 
 interface SpaceStateProperties {
