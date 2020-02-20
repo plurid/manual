@@ -47,7 +47,7 @@ const App = () => {
             <ManualApp
                 modules={modules}
                 metadata={metadata}
-                // data={[pluridReactData]}
+                data={[pluridReactData]}
                 // data={data}
             />
         </div>
