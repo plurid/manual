@@ -1,32 +1,37 @@
-import React, {
-    // useState,
-    // useEffect,
-} from 'react';
+import React from 'react';
 
-import ManualApp from '@plurid/manual-react';
+import ManualApp, {
+    ManualModule,
+    ManualMetadata,
+    ManualData,
+} from '@plurid/manual-react';
 
-import data from './testdata/data/@plurid/plurid-react-small.json';
+import pluridReactData from './testdata/data/@plurid/plurid-react-small.json';
 
 
 
 const App = () => {
-    const modules = [
+    const modules: ManualModule[] = [
         {
             id: 'one',
             elements: [],
         },
     ];
 
-    const metadata = {
+    const metadata: ManualMetadata = {
         name: '@plurid/plurid-react',
     };
+
+    const data: ManualData.ProjectReflection[] = [
+        pluridReactData,
+    ];
 
     return (
         <div>
             <ManualApp
                 modules={modules}
                 metadata={metadata}
-                data={[data]}
+                data={data}
             />
         </div>
     );
