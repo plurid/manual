@@ -368,10 +368,12 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@plurid/manual-data@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@plurid/manual-data/-/manual-data-0.1.2.tgz#4e37451f6cc3aa736bdc1c6299ecdf978cb89beb"
-  integrity sha512-nw4kve2PwXMozHRwnnrhqOFH7zSSl1sTBjMBzlhVIe/BB8wy/aHte8elgdlFi8+QDKTEX/6TBUKmFjg5lk/bCQ==
+"@plurid/manual-data@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@plurid/manual-data/-/manual-data-0.1.3.tgz#530a8ebbccef0a095328c9347d837477f64d8be1"
+  integrity sha512-lBt4pyCrBBTlGKsZunTr818k+4JIh87qL+v4KBt8K/DVOQIlCo9Nrj+Blu7fLLsx8OjV2ruky7I+TPm40WsRwA==
+  dependencies:
+    typedoc "^0.16.10"
 
 "@plurid/plurid-data@^0.1.91":
   version "0.1.91"
