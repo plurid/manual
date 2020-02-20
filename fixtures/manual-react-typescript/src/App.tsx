@@ -5,11 +5,14 @@ import React, {
 
 import ManualApp from '@plurid/manual-react';
 
+import data from '../test/data/@plurid/plurid-react-small.json';
+
 
 
 const App = () => {
     const modules = [
         {
+            id: 'one',
             elements: [],
         },
     ];
@@ -23,6 +26,7 @@ const App = () => {
             <ManualApp
                 modules={modules}
                 metadata={metadata}
+                data={[data]}
             />
         </div>
     );
