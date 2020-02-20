@@ -34,7 +34,7 @@ import selectors from '../../services/state/selectors';
 
 
 interface SpaceOwnProperties {
-    data?: ManualData.ProjectReflection[];
+    data?: ManualData[];
 }
 
 interface SpaceStateProperties {
