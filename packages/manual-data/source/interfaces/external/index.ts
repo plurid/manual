@@ -1,16 +1,18 @@
 export interface ManualAppProperties {
     modules: ManualModule[];
     metadata: ManualMetadata;
+    data?: any[];
 }
 
 
 export interface ManualModule {
-    elements: ManualElement[];
+    elements?: ManualElement[];
 }
 
 
 export interface ManualElement {
-    elements: ManualElement[];
+    element: any;
+    elements?: ManualElement[];
 }
 
 
