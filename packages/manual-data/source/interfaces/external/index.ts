@@ -1,15 +1,20 @@
 import {
-    JSONOutput,
+    JSONOutput as ManualData,
 } from 'typedoc';
 
 import React from 'react';
 
 
 
+export {
+    ManualData,
+}
+
+
 export interface ManualAppProperties {
     modules: ManualModule[];
     metadata: ManualMetadata;
-    data?: JSONOutput.ProjectReflection[];
+    data?: ManualData.ProjectReflection[];
 }
 
 
