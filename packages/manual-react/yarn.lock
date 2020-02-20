@@ -368,10 +368,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@plurid/manual-data@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@plurid/manual-data/-/manual-data-0.1.4.tgz#8efb4ff91f100bbe2fd877fbc221ff4b11578842"
-  integrity sha512-qml/CXqkuvFeOXkmQ+PNkhWyKIb4yEqL2bh0xs0KzHA25LtavlKR3EcV/E9WGsMuFDUQISv+YpoQ7OD4wXDHQw==
+"@plurid/manual-data@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@plurid/manual-data/-/manual-data-0.1.5.tgz#a7699fbe0da37b8c3816bee31ce5b480fb9bb48a"
+  integrity sha512-eClJi8MDVVHE0GdbAtZRS6YbLODPoivh3q/yo3UJ4eoetwk4k7bPOTbdsRCoFzgisZ31MDBRiv7u5FXc0Q7tLQ==
   dependencies:
     typedoc "^0.16.10"
 
