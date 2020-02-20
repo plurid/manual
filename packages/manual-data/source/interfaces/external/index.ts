@@ -1,17 +1,29 @@
+import {
+    JSONOutput,
+} from 'typedoc';
+
+import React from 'react';
+
+
+
 export interface ManualAppProperties {
     modules: ManualModule[];
     metadata: ManualMetadata;
-    data?: any[];
+    data?: JSONOutput.ProjectReflection[];
 }
 
 
 export interface ManualModule {
-    elements?: ManualElement[];
+    id: string;
+    elements: ManualElement[];
+    name?: string;
 }
 
 
 export interface ManualElement {
-    element: any;
+    id: string;
+    component: React.FC;
+    name?: string;
     elements?: ManualElement[];
 }
 
