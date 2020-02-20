@@ -1,10 +1,12 @@
-import React, {
-    useState,
-} from 'react';
+import React from 'react';
 
 import { AnyAction } from 'redux';
 import { connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
+
+import {
+    JSONOutput,
+} from 'typedoc';
 
 import {
     PluridSubApp,
@@ -29,11 +31,10 @@ import StateContext from '../../services/state/context';
 import selectors from '../../services/state/selectors';
 // import actions from '../../services/state/actions';
 
-// import testdata from '../../../../test/data/@plurid/plurid-react.json';
-import testdata from '../../../../test/data/@plurid/plurid-react-small.json';
 
 
 interface SpaceOwnProperties {
+    data?: JSONOutput.ProjectReflection[];
 }
 
 interface SpaceStateProperties {
@@ -52,32 +53,39 @@ const Space: React.FC<SpaceProperties> = (
     properties,
 ) => {
     /** properties */
-    // const {
-        // /** state */
+    const {
+        /** own */
+        data,
+
+        /** state */
         // stateGeneralTheme,
         // stateInteractionTheme,
-    // } = properties;
+    } = properties;
 
     // const [pluridPages, setPluridPages] = useState([]);
 
-    const pluridPages = testdata.children.map(element => {
-        const pluridPage: PluridPage = {
-            path: '/' + element.id,
-            component: {
-                element: () => (
-                    <ManualElement
-                        data={element}
-                    />
-                ),
-                properties: {},
-            },
-        };
-        return pluridPage;
-    });
+    const pluridPages = data
+        ? data[0]?.children?.map(element => {
+            const pluridPage: PluridPage = {
+                path: '/' + element.id,
+                component: {
+                    element: () => (
+                        <ManualElement
+                            data={element}
+                        />
+                    ),
+                    properties: {},
+                },
+            };
+            return pluridPage;
+        })
+        : [];
 
-    const view = testdata.children.map(element => {
-        return '/' + element.id;
-    });
+    const view = data
+        ? data[0]?.children?.map(element => {
+            return '/' + element.id;
+        })
+        : [];
 
     const pluridConfiguration: RecursivePartial<PluridConfiguration> = {
         elements: {

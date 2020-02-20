@@ -79,6 +79,7 @@ const View: React.FC<ViewProperties> = (
     const {
         // modules,
         metadata,
+        data,
     } = appProperties;
 
 
@@ -111,7 +112,9 @@ const View: React.FC<ViewProperties> = (
         >
             <ToolbarMetadata />
 
-            <Space />
+            <Space
+                data={data}
+            />
 
             {/* {!spaceLoading && (
                 <>
