@@ -1,6 +1,6 @@
 {
     "name": "@plurid/manual-react",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "React implementation of Plurid Manual to document software packages in a 3D structure.",
     "keywords": [
         "plurid",
