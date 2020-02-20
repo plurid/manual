@@ -1,8 +1,12 @@
-import {
-    ReflectionKind as ManualElementKind,
-} from 'typedoc';
+// import {
+//     ReflectionKind as ManualElementKind,
+// } from 'typedoc';
 
 
-export {
-    ManualElementKind,
+// export {
+//     ManualElementKind,
+// }
+
+export enum ManualElementKind {
+    Accessor = 262144,
 }
