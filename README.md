@@ -1,10 +1,12 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/plurid/manual/master/about/identity/manual-logo.png" height="250px">
     <br />
+    <br />
     <a target="_blank" href="https://github.com/plurid/manual/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/license-MIT-blue.svg?colorB=1380C3&style=for-the-badge" alt="License: MIT">
+        <img src="https://img.shields.io/badge/license-DEL-blue.svg?colorB=1380C3&style=for-the-badge" alt="License: DEL">
     </a>
 </p>
+
 
 
 <h1 align="center">
@@ -12,12 +14,16 @@
 </h1>
 
 
-Documentation for software packages
+<h3 align="center">
+    Documentation for software packages
+</h3>
+
 
 
 | Supported Languages |
 | ------------------- |
 | TypeScript          |
+
 
 
 ## Packages
