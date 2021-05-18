@@ -1,5 +1,7 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/manual/master/about/identity/manual-logo.png" height="250px">
+    <a target="_blank" href="https://manual.plurid.cloud">
+        <img src="https://raw.githubusercontent.com/plurid/manual/master/about/identity/manual-logo.png" height="250px">
+    </a>
     <br />
     <br />
     <a target="_blank" href="https://github.com/plurid/manual/blob/master/LICENSE">
@@ -10,12 +12,12 @@
 
 
 <h1 align="center">
-    plurid' manual
+    manual
 </h1>
 
 
 <h3 align="center">
-    Documentation for software packages
+    Documentation as a 3D Structure
 </h3>
 
 
